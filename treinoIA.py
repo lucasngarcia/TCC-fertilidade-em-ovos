@@ -11,8 +11,8 @@ import numpy as np
 import cv2
 import os
 
-## tf versão 2.0.0
-##keras versão 2.3.1
+## tf versão 2.10.0
+##keras versão 2.10.0
 
 ### Parâmetros
 path = "Imagens"
