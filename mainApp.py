@@ -101,23 +101,23 @@ while True:
         cont = 0
 
     #evitar que a esteira pare no neutro
-    if numeroClasse == 0 and cont == 15:
+    if numeroClasse == 0 and cont == 10:
         moverEsteira("mover")
 
     #mostra na tela do console o numero da classe e a probabilidade
     print(numeroClasse, valorProbabilidade)
 
     #caso a classe for diferente de zero(a neutra) ele vai para a esteira para a leitura do ovo
-    if numeroClasse != 0 and cont == 2:
+    if numeroClasse != 0 and cont == 3:
         moverEsteira("parar")
 
-    #caso o ovo tiver uma validação de 50 vezes, ele vai mover o braço, mover a esteira e para a leitura por 3 segs
-    if numeroClasse == 1 and cont == 50:
+    #caso o ovo tiver uma validação de 30 vezes, ele vai mover o braço, mover a esteira e para a leitura por 3 segs
+    if numeroClasse == 1 and cont == 30:
         for i in range(0, 80):
             rotacionarBraco(pin, i)
         moverEsteira("mover")
         time.sleep(3)
-    elif numeroClasse == 2 and cont == 50:
+    elif numeroClasse == 2 and cont == 30:
         for i in range(80, 0, -1):
             rotacionarBraco(pin, i)
         moverEsteira("mover")
